@@ -9,6 +9,7 @@
       * [BigSur](#bigsur)
       * [Catalina, Mojave or High Sierra](#catalina-mojave-or-high-sierra)
       * [Confirm the KEXT loaded and in effect](#confirm-the-kext-loaded-and-in-effect)
+   * [Update](#update)
    * [Un-installation](#un-installation)
    * [If your Mac does not boot...](#if-your-mac-does-not-boot)
    * [Copyright](#copyright)
@@ -79,8 +80,7 @@ The following steps assume users place the downloaded `SsdPmEnabler.kext` inside
 
 2. Once you run the command line in Step 1, MacOS will pop up a window to alert you about the new KEXT.
 
-Click "Open System Preferences" in on the pop-up. Then click "Allow" to grant `SsdPmEnabler.kext` permission to run.
-
+Click "Open System Preferences" on the pop-up. Then click "Allow" to grant `SsdPmEnabler.kext` permission to run.
 
 3. Reboot to take effect
 
@@ -113,14 +113,31 @@ Click "Open System Preferences" in on the pop-up. Then click "Allow" to grant `S
  log show --style syslog --last boot | grep \(SsdPmEnabler
 ````
 
-2. All good if you see these three lines in the output
+2. All good if you see these two lines in the output
 ````
 kernel[0]: (SsdPmEnabler) Copyright (c) 2020-2021 kvic (https://github.com/kvic-z/SsdPmEnabler)
 kernel[0]: (SsdPmEnabler) Enabled PCIe PM on SSD
-kernel[0]: (SsdPmEnabler) Couldn't alloc class "com-ZLab-SsdPmEnabler"
 ````
 
 If the second line is missing, power saving fails to enable on the SSD/PCIe socket.
+
+**N.B.**
+* If you see "Couldn't alloc class" warning in the output, it's safe to ignore.
+
+# Update
+
+Hey, good that we have bug fix or enhancement. So in the rare occasions of a new version, use the following steps to update your installed `SsdPmEnabler.kext`.
+
+1. Open Terminal. Type:
+
+**WARNING**. Double check for typo before you press ENTER key
+
+```
+ sudo kextunload /Library/Extensions/SsdPmEnabler.kext
+ sudo rm -rf /Library/Extensions/SsdPmEnabler.kext
+```
+
+2. Proceed to the sub-section for your MacOS version under Installation. Redo the steps there.
 
 # Un-installation
 
