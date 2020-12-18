@@ -24,7 +24,8 @@ These models come with user replaceable SSDs. Through a small 3rd-party adapter,
 
 `SsdPmEnabler.kext` is verified to function correctly on the following MacBooks and SSDs.
 * 2015 13-inch MacBook Pro (MacBookPro12,1)
-  * WD SN550 1TB (~40% idle power reduction with `SsdPmEnabler.kext`)
+  * WD SN550 1TB (~40% reduction in idle power with `SsdPmEnabler.kext`)
+
 # Precaution
 
 Enabling power saving through `SsdPmEnabler.kext` impacts how your SSDs operate. As always with any storage media, back up your data before proceed.
@@ -32,6 +33,7 @@ Enabling power saving through `SsdPmEnabler.kext` impacts how your SSDs operate.
 In rare occasions, your specific model of SSDs might not function correctly in low power states. That may possibly cause data corruption in extreme cases.
 
 <span style="color:red">**YOU BE BEWARNED. THE AUTHOR OF THIS SOFTWARE WON'T TAKE RESPONSIBILITY FOR ANY DATA LOSS. PROCEED AT YOUR OWN RISK.**</span>
+
 # Pre-requisite
 
 Apple have announced deprecation of KEXTs in 2019. For this reason alone, SsdPmEnabler.kext (as a KEXT) will never be cryptographically signed by Apple. With that said many KEXTs written by Apple themselves are still in use and critical to MacOS core functionalities. It's safe to assume it'll take a few more years at minimum before Apple abandon KEXTs completely.
@@ -47,7 +49,11 @@ Granularity of control differs with MacOS versions, from all or nothing in High 
 ````
   csrutil enable --without kext
 ````
+
 3. Reboot
+
+**N.B.**
+* Ignore the warning related to unsupported feature in Step 2.
 
 ## Disable SIP in High Sierra
 
@@ -66,16 +72,23 @@ The following steps assume users place the downloaded `SsdPmEnabler.kext` inside
 
 ## BigSur
 
-1. Open Terminal. Type the following lines one by one:
+1. Open Terminal. Type the following command lines one by one:
 ````
  sudo cp -R ~/Downloads/SsdPmEnabler.kext /Library/Extensions
- sudo kextcache -i /
- sudo kextload /Library/Extensions/SsdPmEnabler.kext
 ````
 
-2. Once you run the third line in Step 1, MacOS will ask for your permission. Follow the system's instructions on screen.
+2. Once you run the command line in Step 1, MacOS will pop up a window to alert you about the new KEXT.
 
-3. Reboot
+Click "Open System Preferences" in on the pop-up. Then click "Allow" to grant `SsdPmEnabler.kext` permission to run.
+
+
+3. Reboot to take effect
+
+**N.B.**
+* There is no EXTRA slash after `SsdPmEnabler.kext` in the first command line in Step 1.
+* Ignore the invalid signature warning in Step 1
+* `SsdPmEnabler.kext` will not be able to run if you do not grant permission in Step 2.
+* See this [screenshot](https://raw.githubusercontent.com/kvic-z/SsdPmEnabler/main/New_Security_and%20Privacy_in_BigSur.png) for where to find the "Allow" button in Step 2.
 
 ## Catalina, Mojave or High Sierra
 
@@ -88,19 +101,23 @@ The following steps assume users place the downloaded `SsdPmEnabler.kext` inside
 
 2. That's it!
 
+**N.B.**
+* There is no EXTRA slash after `SsdPmEnabler.kext` in the first command line in Step 1.
+* Ignore the invalid signature warning in Step 1
+
 ## Confirm the KEXT loaded and in effect
 
 
 1. Open Terminal. Type the following line:
 ````
- log show --style syslog --last boot | grep kernel.*SsdPmEnabler
+ log show --style syslog --last boot | grep \(SsdPmEnabler
 ````
 
 2. All good if you see these three lines in the output
 ````
-kernel: (SsdPmEnabler) Copyright (c) 2020-2021 kvic (https://github.com/kvic-z/SsdPmEnabler)
-kernel: (SsdPmEnabler) Enabled PCIe PM on SSD
-kernel: (SsdPmEnabler) Couldn't alloc class "com-ZLab-SsdPmEnabler"
+kernel[0]: (SsdPmEnabler) Copyright (c) 2020-2021 kvic (https://github.com/kvic-z/SsdPmEnabler)
+kernel[0]: (SsdPmEnabler) Enabled PCIe PM on SSD
+kernel[0]: (SsdPmEnabler) Couldn't alloc class "com-ZLab-SsdPmEnabler"
 ````
 
 If the second line is missing, power saving fails to enable on the SSD/PCIe socket.
@@ -118,7 +135,14 @@ Sad to see you leaving. Perhaps next time `SsdPmEnabler.kext` will work better f
  sudo rm -rf SsdPmEnabler.kext
  sudo kextcache -i /
 ````
-2. Reboot
+2. Reboot into Recovery Mode. Click [HERE](https://support.apple.com/en-us/HT201314) for details.
+
+3. Open Terminal. Enable SIP in its entirety by typing:
+````
+ csrutil enable
+````
+
+4. Reboot
 
 # If your Mac does not boot...
 
@@ -128,7 +152,7 @@ This should not ever happen. Touch wood if it happens to you right after install
 
 2. Open Terminal. Type the following three command lines one by one (including double quotes).
 
-Note. For **BigSur, Mojave and Catalina**, if your system disk is named 'macOS' substitute 'NAME' with 'macOS - Data' or else adjust accordingly.
+Note that for **BigSur, Mojave and Catalina**, if your system disk is named 'macOS' substitute 'NAME' with 'macOS - Data' or else adjust accordingly.
 
 For **High Sierra**, if your system disk is named 'Macintosh HD' substitute 'NAME' with 'Macintosh HD' or else adjust accordingly.
 
