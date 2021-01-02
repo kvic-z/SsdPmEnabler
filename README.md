@@ -37,6 +37,7 @@ ssdpmEnabler is verified to function correctly on the following MacBooks and M.2
 || Crucial P2 (2TB) | 90% | 0.01 |
 || Intel 660p (2TB) | 65% | 0.06 |
 2014 15" MBP (MacBookPro11,3) | Inland Premium (1TB) | >82% | 0.02 |
+2013 15" MBP (MacBookPro11,2) | Sabrent Rocket (1TB) | 71% | 0.04 |
 
 List to be updated on an on-going basis as user reports come in.
 
