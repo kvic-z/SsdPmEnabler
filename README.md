@@ -26,14 +26,19 @@ Modern SSDs have advantage on speed and capacity over original Apple SSDs. With 
 
 # Confirmed working MacBook models
 
-ssdpmEnabler is verified to function correctly on the following MacBooks and SSDs.
-* 2015 13-inch MacBook Pro (MacBookPro12,1)
-  * WD SN550 1TB (~40% reduction in idle power with ssdpmEnabler)
+ssdpmEnabler is verified to function correctly on the following MacBooks and M.2 NVMe SSDs:
+
+| Mac Model          |  SSD Description   | Reduction in idle power | Idle at (A) |
+|:-------------------|:------------------ | -----------------------:| :-----------|
+2015 13" MBP (MacBookPro12,1) | Sabrent Rocket (1TB) | ~85% | 0.02 |
+|| Seagate Barracuda 510 (500GB) | 64% | 0.05 |
+|| WD SN550 (1TB) | 40% | 0.16 |
+2015 15" MBP (MacBookPro11,5) | ADATA SX8200 Pro (1TB) | 50% | 0.12 |
+|| Crucial P2 (2TB) | 90% | 0.01 |
+|| Intel 660p (2TB) | 65% | 0.06 |
+2014 15" MBP (MacBookPro11,3) | Inland Premium (1TB) | >82% | 0.02 |
 
 List to be updated on an on-going basis as user reports come in.
-
-**N.B.** According to user reports, ssdpmEnabler v0.1.0 seems to be incompatible with the following models
- * 2015 15-inch MacBook Pro (MacBookPro11,5)
 
 # Precaution
 
@@ -75,13 +80,13 @@ Granularity of control differs with macOS versions, from all or nothing in High 
 
 # Installation
 
-The basic idea is to copy `SsdPmEnabler.kext` into `/Library/Extensions`, update KEXT cache, and load the KEXT. Big Sur requires two addtional steps: users explicitly grant permisson to load `SsdPmEnabler.kext` when prompted, and then reboot to take effect.
+The basic idea is to copy `SsdPmEnabler.kext` into `/Library/Extensions`, update KEXT cache, and load the KEXT. Big Sur requires two additional steps: users explicitly grant permisson to load `SsdPmEnabler.kext` when prompted, and then reboot to take effect.
 
 The following steps assume users place the downloaded `SsdPmEnabler.kext` inside `~/Downloads.` Adjust the location of your download if necessary.
 
 ## Big Sur
 
-1. Open Terminal. Type the following command lines:
+1. Open Terminal. Type the following command line:
 ````
  sudo cp -R ~/Downloads/SsdPmEnabler.kext /Library/Extensions
 ````
