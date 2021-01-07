@@ -31,13 +31,14 @@ ssdpmEnabler is verified to function correctly on the following MacBooks and M.2
 | Mac Model          |  SSD Description   | Reduction in idle power | Idle at (A) |
 |:-------------------|:------------------ | -----------------------:| :-----------|
 2015 13" MBP (MacBookPro12,1) | Sabrent Rocket (1TB) | ~85% | 0.02 |
-|| Seagate Barracuda 510 (500GB) | 64% | 0.05 |
+|| Seagate Barracuda 510 (500GB, 1TB) | 64% | 0.05 |
 || WD SN550 (1TB) | 40% | 0.16 |
 2015 15" MBP (MacBookPro11,5) | ADATA SX8200 Pro (1TB) | 50% | 0.12 |
 || Crucial P2 (2TB) | 90% | 0.01 |
 || Intel 660p (2TB) | 65% | 0.06 |
-2014 15" MBP (MacBookPro11,3) | Inland Premium (1TB) | >82% | 0.02 |
-2013 15" MBP (MacBookPro11,2) | Sabrent Rocket (1TB) | 71% | 0.04 |
+2013/14 15" MBP (MacBookPro11,2) | ADATA SX8200 Pro (? GB) | 41% | 0.10 |
+|| Inland Premium (1TB) | >82% | 0.02 |
+|| Sabrent Rocket (1TB) | 71% | 0.04 |
 
 List to be updated on an on-going basis as user reports come in.
 
