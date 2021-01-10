@@ -30,19 +30,25 @@ ssdpmEnabler is verified to function correctly on the following MacBooks and M.2
 
 | Mac Model          |  SSD Description   | Reduction in idle power | Idle at (A) |
 |:-------------------|:------------------ | -----------------------:| :-----------|
-2015 13" MBP (MacBookPro12,1) | Sabrent Rocket (1TB) | ~85% | 0.02 |
+2015 13" MBP (MacBookPro12,1) | Sabrent Rocket<sup>1</sup> (1TB) | ~85% | 0.02 |
 || Seagate Barracuda 510 (500GB, 1TB) | 64% | 0.05 |
 || WD SN550 (1TB) | 40% | 0.16 |
 2015 15" MBP (MacBookPro11,5) | ADATA SX8200 Pro (1TB) | 50% | 0.12 |
 || Crucial P2 (2TB) | 90% | 0.01 |
 || Intel 660p (2TB) | 65% | 0.06 |
 2013/14 15" MBP (MacBookPro11,3) | ADATA SX8200 Pro (2TB) | 41% | 0.10 |
-|| Sabrent Rocket Pro (2TB) | 71% | 0.05 |
+|| Sabrent Rocket Pro<sup>1</sup> (2TB) | 71% | 0.05 |
 || WD SN550 (1TB) | 42% | 0.18 |
 2013/14 15" MBP (MacBookPro11,2) | Inland Premium (1TB) | >82% | 0.02 |
-|| Sabrent Rocket (1TB) | 71% | 0.04 |
+|| Sabrent Rocket<sup>2</sup> (1TB) | 71% | 0.04 |
 
 List to be updated on an on-going basis as user reports come in.
+
+**Notes**
+
+<sup>1</sup> Phison E12 reference design that comes with firmware ECFM12.3.<br>
+<sup>2</sup> User didn't specify but it's believed to be Phison E12 reference design with ECFM1x.x series firmware.<br>
+<sup>3</sup> Phison E12S (and some "Phison E12") reference design based products with ECFM2x.x series firmware, and newer Sabrent Rocket with RKT3xx.x series firmware are very likely incompatible with ssdpmEnabler. SSDs with ECFM22.6 firmware (Silicon Power A80, Corsair MP510) and Sabrent Rocket with RKT303.3 are found to be incompatible.
 
 # Precaution
 
