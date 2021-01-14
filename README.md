@@ -37,7 +37,7 @@ ssdpmEnabler is verified to function correctly on the following MacBooks and M.2
 2015 15" MBP (MacBookPro11,5) | ADATA SX8200 Pro (1TB) | 50% | 0.12 |
 || Crucial P2 (2TB) | 90% | 0.01 |
 || Intel 660p (2TB) | 65% | 0.06 |
-|| Sabrent Rocket<sup>3</sup> (? GB) | user: It just works! | ? |
+|| Sabrent Rocket<sup>3</sup> (1TB) | 80% | 0.04 |
 2013/14 15" MBP (MacBookPro11,3) | ADATA SX8200 Pro (2TB) | 41% | 0.10 |
 || Sabrent Rocket Pro<sup>1</sup> (2TB) | 71% | 0.05 |
 || WD SN550 (1TB) | 42% | 0.18 |
