@@ -37,7 +37,7 @@ ssdpmEnabler is verified to function correctly on the following MacBooks and M.2
 2015 15" MBP (MacBookPro11,5) | ADATA SX8200 Pro (1TB) | 50% | 0.12 |
 || Crucial P2 (2TB) | 90% | 0.01 |
 || Intel 660p (2TB) | 65% | 0.06 |
-|| Sabrent Rocket<sup>3</sup> (1TB) | 80% | 0.04 |
+|| Sabrent Rocket<sup>3</sup> (500GB) | ~80% | 0.04 |
 2013/14 15" MBP (MacBookPro11,3) | ADATA SX8200 Pro (2TB) | 41% | 0.10 |
 || Sabrent Rocket Pro<sup>1</sup> (2TB) | 71% | 0.05 |
 || WD SN550 (1TB) | 42% | 0.18 |
@@ -51,7 +51,7 @@ List to be updated on an on-going basis as user reports come in.
 <sup>1</sup> Phison E12 reference design that comes with firmware ECFM12.3.<br>
 <sup>2</sup> Users didn't specify but it's believed to be Phison E12 reference design with ECFM1x.x series firmware.<br>
 <sup>3</sup> Phison E12S reference design with re-branded firmware version string RKT303.3<br>
-<sup>4</sup> Re-branded Phison E12S reference design with ECFM2x.x series firmware or RKT3xx.x (if Sabrent) will very likely kernel panic on reboot. Silicon Power A80 and Corsair MP510 with ECFM22.6, Sabrent Rocket with RKT303.3 are reported by users to experience the kernel panic upon reboot and all such reported cases so far run Big Sur on MacBookPro11,1.
+<sup>4</sup> Re-branded Phison E12S reference design with ECFM2x.x series firmware or RKT3xx.x (if Sabrent) will very likely kernel panic on reboot. Silicon Power A80 and Corsair MP510 with ECFM22.6, Sabrent Rocket with RKT303.3 are reported by users to experience the kernel panic upon reboot and all such reported cases so far run Big Sur (Corsair MP510 additionally confirmed KP on Mojave & Catalina) on MacBookPro11,1.  
 
 # Precaution
 
