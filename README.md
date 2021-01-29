@@ -39,7 +39,7 @@ ssdpmEnabler is verified to function correctly on the following MacBooks and M.2
 || Intel 660p (2TB) | 65% | 0.06 |
 || Sabrent Rocket<sup>3</sup> (500GB) | ~80% | 0.04 |
 2013/14 15" MBP (MacBookPro11,3) | ADATA SX8200 Pro (2TB) | 41% | 0.10 |
-|| [Crucial P2 (2TB)](https://github.com/kvic-z/SsdPmEnabler/issues/3#issue-796352269) | 98% | 0.02 |
+|| [Crucial P2 (2TB)](https://github.com/kvic-z/SsdPmEnabler/issues/3#issue-796352269) | 78% | 0.02 |
 || Sabrent Rocket Pro<sup>1</sup> (2TB) | 71% | 0.05 |
 || WD SN550 (1TB) | 42% | 0.18 |
 2013/14 15" MBP (MacBookPro11,2) | Inland Premium<sup>2</sup> (1TB) | >82% | 0.02 |
