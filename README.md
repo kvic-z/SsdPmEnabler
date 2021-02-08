@@ -56,7 +56,8 @@ List to be updated on an on-going basis as user reports come in.
 <sup>1</sup> Phison E12 reference design that comes with firmware ECFM12.3.<br>
 <sup>2</sup> Users didn't specify but it's believed to be Phison E12 reference design with ECFM1x.x series firmware.<br>
 <sup>3</sup> Phison E12S reference design with re-branded firmware version string RKT303.3<br>
-<sup>4</sup> Re-branded Phison E12S reference design with ECFM2x.x series firmware or RKT3xx.x (if Sabrent) will very likely kernel panic on reboot. Silicon Power A80 and Corsair MP510 with ECFM22.6, Sabrent Rocket with RKT303.3 are reported by users to experience the kernel panic upon reboot and all such reported cases so far run Big Sur (Corsair MP510 additionally confirmed KP on Mojave & Catalina) on MacBookPro11,1.  
+
+Note that **MacBookPro11,1** and **MacBookAir6,2** are not compatible with 3rd-party NVMe SSDs in lower power modes. Owners of these two models are not recommended to install ssdpmEnabler as it will result in crash.
 
 # Precaution
 
@@ -100,7 +101,7 @@ Granularity of control differs with macOS versions, from all or nothing in High 
 
 The basic idea is to copy `SsdPmEnabler.kext` into `/Library/Extensions`, update KEXT cache, and load the KEXT. Big Sur requires two additional steps: users explicitly grant permisson to load `SsdPmEnabler.kext` when prompted, and then reboot to take effect.
 
-The following steps assume users place the downloaded `SsdPmEnabler.kext` inside `~/Downloads.` Adjust the location of your download if necessary.
+Latest version of `SsdPmEnabler.kext` can be downloaded from the [Release](https://github.com/kvic-z/SsdPmEnabler/releases) page. The following steps assume users place the downloaded `SsdPmEnabler.kext` inside `~/Downloads.` Adjust the location of your download if necessary.
 
 ## Big Sur
 
