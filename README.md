@@ -47,6 +47,7 @@ ssdpmEnabler is verified to function correctly on the following MacBooks and M.2
 2013/14 15" MBP (MacBookPro11,2) | Inland Premium<sup>2</sup> (1TB) | >82% | 0.02 |
 || Sabrent Rocket<sup>2</sup> (1TB) | 71% | 0.04 |
 2015 13" MBA (MacBookAir7,2) | [ADATA SX8200 Pro (1TB)](https://forums.macrumors.com/threads/upgrading-2013-2014-macbook-pro-ssd-to-m-2-nvme.2034976/post-29543449) | 41% | 0.13 |
+|| [Crucial P2 (1TB)](https://forums.macrumors.com/threads/upgrading-2013-2014-macbook-pro-ssd-to-m-2-nvme.2034976/post-29596233) | 90% | 0.01 |
 || [Sabrent Rocket (1TB)](https://forums.macrumors.com/threads/upgrading-2013-2014-macbook-pro-ssd-to-m-2-nvme.2034976/post-29566354) | 59% | 0.07 |
 
 List to be updated on an on-going basis as user reports come in.
