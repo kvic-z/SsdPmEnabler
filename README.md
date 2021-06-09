@@ -3,10 +3,10 @@
    * [Confirmed working MacBook models](#confirmed-working-macbook-models)
    * [Precaution](#precaution)
    * [Prerequisite](#prerequisite)
-      * [Disable part of SIP in Mojave, Catalina or Big Sur](#disable-part-of-sip-in-mojave-catalina-or-big-sur)
+      * [Disable part of SIP in Mojave, Catalina, Big Sur or Monterey](#disable-part-of-sip-in-mojave-catalina-big-sur-or-monterey)
       * [Disable SIP in High Sierra](#disable-sip-in-high-sierra)
    * [Installation](#installation)
-      * [Big Sur](#big-sur)
+      * [Monterey / Big Sur](#monterey--big-sur)
       * [Catalina, Mojave or High Sierra](#catalina-mojave-or-high-sierra)
       * [Confirm ssdpmEnabler working properly](#confirm-ssdpmenabler-working-properly)
    * [Update](#update)
@@ -76,7 +76,7 @@ By default unsigned KEXTs are denied from running and this is part of Apple's [S
 
 Granularity of control differs with macOS versions, from all or nothing in High Sierra, to only lifting partial restriction in Mojave, Catalina or Big Sur, to the new additional user consent to each unsigned KEXT in Big Sur.
 
-## Disable part of SIP in Mojave, Catalina or Big Sur
+## Disable part of SIP in Mojave, Catalina, Big Sur or Monterey
 
 1. Reboot into Recovery Mode. Click [here](https://support.apple.com/en-us/HT201314) for details.
 2. In Terminal, type:
@@ -104,7 +104,7 @@ The basic idea is to copy `SsdPmEnabler.kext` into `/Library/Extensions`, update
 
 Latest version of `SsdPmEnabler.kext` can be downloaded from the [Release](https://github.com/kvic-z/SsdPmEnabler/releases) page. The following steps assume users place the downloaded `SsdPmEnabler.kext` inside `~/Downloads.` Adjust the location of your download if necessary.
 
-## Big Sur
+## Monterey / Big Sur
 
 1. Open Terminal. Type the following command line:
 ````
