@@ -44,7 +44,7 @@ By default unsigned KEXTs are denied from running and this is part of Apple's [S
 
 Granularity of control differs with macOS versions, from all or nothing in High Sierra, to only lifting partial restriction in Mojave, Catalina or Big Sur, to the new additional user consent to each unsigned KEXT in Big Sur.
 
-## Disable part of SIP in Mojave, Catalina, Big Sur or Monterey
+## Disable part of SIP in High Sierra, Mojave, Catalina, Big Sur or Monterey
 
 1. Reboot into Recovery Mode. Click [here](https://support.apple.com/en-us/HT201314) for details.
 2. In Terminal, type:
@@ -56,15 +56,6 @@ Granularity of control differs with macOS versions, from all or nothing in High 
 
 **N.B.**
 * Ignore the warning related to unsupported feature in Step 2.
-
-## Disable SIP in High Sierra
-
-1. Reboot into Recovery Mode. Click [here](https://support.apple.com/en-us/HT201314) for details.
-2. In Terminal, type:
-````
-  csrutil disable
-````
-3. Reboot
 
 # Installation
 
