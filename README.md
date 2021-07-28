@@ -3,8 +3,7 @@
    * [Confirmed working MacBook models](#confirmed-working-macbook-models)
    * [Precaution](#precaution)
    * [Prerequisite](#prerequisite)
-      * [Disable part of SIP in Mojave, Catalina, Big Sur or Monterey](#disable-part-of-sip-in-mojave-catalina-big-sur-or-monterey)
-      * [Disable SIP in High Sierra](#disable-sip-in-high-sierra)
+      * [Disable part of SIP in High Sierra or later](#disable-part-of-sip-in-high-sierra-or-later)
    * [Installation](#installation)
       * [Monterey / Big Sur](#monterey--big-sur)
       * [Catalina, Mojave or High Sierra](#catalina-mojave-or-high-sierra)
@@ -44,7 +43,7 @@ By default unsigned KEXTs are denied from running and this is part of Apple's [S
 
 Granularity of control differs with macOS versions, from all or nothing in High Sierra, to only lifting partial restriction in Mojave, Catalina or Big Sur, to the new additional user consent to each unsigned KEXT in Big Sur.
 
-## Disable part of SIP in High Sierra, Mojave, Catalina, Big Sur or Monterey
+## Disable part of SIP in High Sierra or later
 
 1. Reboot into Recovery Mode. Click [here](https://support.apple.com/en-us/HT201314) for details.
 2. In Terminal, type:
