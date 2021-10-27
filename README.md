@@ -174,6 +174,21 @@ For **High Sierra**, if your system disk is named 'Macintosh HD' substitute 'NAM
 
 3. Reboot
 
+# If SsdPmEnabler.kext is not loaded anymore
+
+Check "System Information.app" > Software > Extensions > SsdPmEnabler.
+
+If the "Loaded" column says "No" then check the details for the attribute: "Signature Validation Error".
+
+If it says "Kext signature validation error code -67050" then this means that SIP was again entirely enabled and as SsdPmEnabler.kext has no signature the loading of the kernel extension is prohibited and hence fails.
+
+## What can lead to SIP being entirely re-enabled?
+- macOS upgrade
+- Parameter RAM Reset (CMD-ALT-P-R during startup)
+
+## How do I get SsdPmEnabler working again?
+Perform the instructions of these sections in the given order: Un-installation, Prerequisite, and Installation.
+
 # Copyright
 
 Copyright (c) 2020-2021. kvic
