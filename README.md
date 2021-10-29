@@ -11,6 +11,7 @@
    * [Update](#update)
    * [Un-installation](#un-installation)
    * [If your Mac does not boot...](#if-your-mac-does-not-boot)
+   * [If SsdPmEnabler.kext is not loaded anymore](#if-ssdpmenablerkext-is-not-loaded-anymore)
    * [Copyright](#copyright)
    * [License and Disclaimer](#license-and-disclaimer)
 
